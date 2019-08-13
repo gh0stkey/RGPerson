@@ -39,7 +39,6 @@ def second_name():
     second_name_list = [GBK2312(), '']
     n = random.randint(0, 1)
     s_name = second_name_list[n]
-    print(s_name)
     return s_name
 
 def last_name():
