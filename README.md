@@ -14,17 +14,21 @@ RGPerson - 随机身份生成
 
 ## 介绍
 
-该脚本生成信息：姓名\年龄\性别\身份证\手机号
+该脚本生成信息：姓名\年龄\性别\身份证\手机号\组织机构代码\统一社会信用代码
 
 ## 脚本编写原理
 
-**脚本的三大函数：** genMobile()、genIdCard()、genName()
+**脚本的函数：** genMobile()、genIdCard()、genName()、genOrgCode()、genCreditCode()
 
 genMobile() 为随机生成手机号的函数 
 
 genName() 为随机生成姓名的函数
 
 genIdCard() 为随机生成身份证的函数
+
+genOrgCode() 为随机生成组织机构代码的函数
+
+genCreditCode() 为随机生成统一社会信用代码的函数
 
 ### genMobile()
 
@@ -202,3 +206,5 @@ https://blog.csdn.net/ak739105231/article/details/83932151
 https://github.com/jayknoxqu/id-number-util
 
 https://blog.csdn.net/tobacco5648/article/details/50613025
+
+https://github.com/xbeginagain/generator
