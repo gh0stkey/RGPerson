@@ -31,7 +31,8 @@ def first_name():
 def GBK2312():
     head = random.randint(0xb0, 0xf7)
     body = random.randint(0xa1, 0xf9)
-    val = f'{head:x}{body:x}'
+    #val = f'{head:x}{body:x}'
+    val = '%s%s' % (hex(head).replace('0x',''), hex(body).replace('0x',''))
     st = bytes.fromhex(val).decode('gb2312')
     return st
 
