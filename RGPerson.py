@@ -29,7 +29,7 @@ def first_name():
     return f_name
 
 def GBK2312():
-    head = random.randint(0xb0, 0xf7)
+    head = random.randint(0xb0, 0xba)
     body = random.randint(0xa1, 0xf9)
     #val = f'{head:x}{body:x}'
     val = '%s%s' % (hex(head).replace('0x',''), hex(body).replace('0x',''))
