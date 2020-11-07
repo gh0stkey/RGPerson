@@ -5,6 +5,7 @@
 # Team: Mystery Security Team
 
 import random, sys
+from pypinyin import lazy_pinyin
 from districtcode import area_dict
 from datetime import timedelta, date
 
@@ -129,8 +130,10 @@ def genHackerId():
         ids = f.readlines()
     return random.choice(ids).replace('\n','')
 
+
 if __name__ == '__main__':
     age = random.randint(16,60) #可调整生成的年龄范围（身份证），这边是16-60岁
     gender = random.randint(0,1)
+    name = genName()
     sex = u"男" if gender == 1 else u"女"
-    print("ID：{}\n姓名: {}\n年龄: {}\n性别: {}\n身份证: {}\n手机号: {} {}\n组织机构代码: {}\n统一社会信用代码: {}\n单位性质: {}".format(genHackerId(), genName(), age, sex, genIdCard(age, gender), list(genMobile().keys())[0], list(genMobile().values())[0], genOrgCode(), list(genCreditCode().keys())[0], list(genCreditCode().values())[0]))
+    print("ID: {}\n姓名: {} 拼音: {} \n年龄: {}\n性别: {}\n身份证: {}\n手机号: {} {}\n组织机构代码: {}\n统一社会信用代码: {}\n单位性质: {}".format(genHackerId(), name, ''.join(lazy_pinyin(name)), age, sex, genIdCard(age, gender), list(genMobile().keys())[0], list(genMobile().values())[0], genOrgCode(), list(genCreditCode().keys())[0], list(genCreditCode().values())[0]))
