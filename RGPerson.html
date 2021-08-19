@@ -578,7 +578,6 @@
 
 	// 生成身份证号
 	function genIDCard(age, gender) {
-		var age=10;var gender = 1;
 	    var areaCode = Object.keys(areaList)[getRandom(0, Object.keys(areaList).length-1)];
 
 	    var idCodeList = [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2];
@@ -616,7 +615,7 @@
 
 	function genPersonInfo() {
 		var personInfo = document.getElementById("personInfo");
-		personInfo.innerHTML = "ID: " + genHackerId() + "<br>" + "手机号: " + genMobile() + "<br>" + "身份证号: " + genIDCard();
+		personInfo.innerHTML = "ID: " + genHackerId() + "<br>" + "手机号: " + genMobile() + "<br>" + "身份证号: " + genIDCard(getRandom(19, 50), getRandom(0, 1));
 	}
 
 	
