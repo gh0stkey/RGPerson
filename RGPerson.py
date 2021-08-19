@@ -52,7 +52,7 @@ def genName():
     return name
 
 # 生成身份证
-def genIdCard(age,gender):
+def genIdCard(age, gender):
     area_code = ('%s' % random.choice(list(area_dict.keys())))
     id_code_list = [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2]
     check_code_list = [1, 0, 'X', 9, 8, 7, 6, 5, 4, 3, 2]
